@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree&family=PT+Sans:ital@1&family=Sawarabi+Mincho&display=swap');
+body{
+    color: #363432;
+    font-family: 'Sawarabi Mincho', serif;;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'PT Sans', sans-serif;
+}
+header{
+    height: 90px;
+    background-color: rgba(255,239,243,0.5);
+    position: sticky;
+    top:0;
+}
+header > img{
+    width: 80px;
+}
+.container{
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container_personalizados{
+    margin: 15px auto;
+}
+
+.carousel{
+    background-color: #EABBC6;
+    border: 1px solid black;
+    width:98%;
+    height: 250px;
+}
+.container_ventas{
+    background-color: #EABBC6;
+    display: flex;
+    padding: 15px;
+    justify-content: space-around;
+}
+.card_venta{
+    border: 1px solid #F6F4F1;
+    width:30vw;
+    height:250px;
+}
+.card_venta h3{
+    color: #F6F4F1;
+    font-size: 1.5rem;
+}
+.container_memorias{
+    border: 1px solid #EABBC6 ;
+    background-image: linear-gradient(to right bottom, #eabbc6, #efc9c8, #f1d8d0, #f2e7df, #f6f4f1);
+    border-radius: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:30px auto;
+    padding: 15px;
+}
+.container_memorias p{
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+    text-align: left;
+    padding: 15px;
+}
+.container_memorias img{
+    width:300px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer .logo{
+    margin: auto auto;
+}
+footer .logo img{
+    width: 120px;
+} 
+footer{
+    background-color: #FFEFF3;
+    margin-top: 20px;
+}
+footer .about{
+    text-align: left;
+    margin-left: 30px;
+}
+footer .about h3{
+    color: #FF537B;
+}
+footer .about h4{
+    color: #363432;
+}
+footer .about a{
+    text-decoration: none;
+    color: #363432;
+}
+footer .social_media_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.social_icon{
+    margin:10px;
+    width: 42px;
+}
