@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Maitree&family=PT+Sans:ital@1&family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Sawarabi+Mincho&display=swap');
 body{
     color: #363432;
     font-family: 'Sawarabi Mincho', serif;;
 }
 h1,h2,h3,h4,h5{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Courgette', cursive;
 }
 header{
     height: 90px;
@@ -22,7 +22,6 @@ header > img{
     max-width: 1600px;
     margin: 0 auto;
 }
-
 .container_hero{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -56,8 +55,13 @@ main{
     margin: 20px auto;
 }
 
+h1{
+    font-size:2.5rem;
+}
+
 section h2{
     margin: 50px auto;
+    font-size: 2rem;
 }
 
 .box_shadow{
