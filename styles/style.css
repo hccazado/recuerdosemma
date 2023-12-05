@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Sawarabi+Mincho&display=swap');
 body{
-    color: #363432;
-    font-family: 'Sawarabi Mincho', serif;;
+    color: #5E565A;
+    font-family: 'Sawarabi Mincho', serif;
+    margin: 0;
 }
 h1,h2,h3,h4,h5{
     font-family: 'Courgette', cursive;
 }
 header{
-    height: 90px;
+    height: 80px;
     /*background-color: rgba(255,239,243,0.9);*/
-    background-color: rgba(255, 166, 158, 0.6);
+    /*background-color: rgba(255, 166, 158, 0.6);*/
+    background-color: rgba(255, 254, 253, 0.8);
+    box-shadow: rgba(255, 166, 158, 0.6) 2px 4px 3px;
+    /*box-shadow: rgba(140, 103, 160, 0.3) 4px 4px 3px;*/
     position: sticky;
     top:0;
+    padding:5px;
+    z-index: 10;
 }
 header > img{
     width: 80px;
     border-radius: 50%;
+    
 }
 .container{
     text-align: center;
@@ -35,7 +42,7 @@ header > img{
     width:100%;
 }
 .filter{
-    background: linear-gradient(rgba(110, 110, 110, 0.7), rgba(110, 110, 110, 0.5));
+    background: linear-gradient(rgba(145, 130, 110, 0.8), rgba(110, 110, 110, 0.6));
 
     grid-column: 1/11;
     grid-row: 1/10;
@@ -46,8 +53,8 @@ header > img{
     grid-column: 5/10;
     grid-row: 4/7;
     align-self: center;
-    color: white;
-    text-shadow:rgb(100, 100, 100);
+    color: #fed;
+    text-shadow:rgba(54,52,50,0.4) 2px 2px 9px;
 }
 
 main{
@@ -58,7 +65,9 @@ main{
 h1{
     font-size:2.5rem;
 }
-
+.text_shadow{
+    text-shadow: #FF537B 7px 3px 10px;
+}
 section h2{
     margin: 50px auto;
     font-size: 2rem;
@@ -86,6 +95,34 @@ section h2{
     justify-content: space-around;
     width: 80%;
 }
+.cardventa{
+    background-color: #f1d8d0;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    display: flex;
+    width: 90%;
+    margin: 50px;
+}
+.info{
+    width:40%;
+    margin: 15px auto;
+}
+.info h2{
+    margin: 20px;
+}
+.cardventa img{
+    width:30%;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
+
+.info ul{
+    list-style-type:circle;
+}
+.info > ul >li{
+    text-align: left;
+}
+
 .card_venta{
     background-color: #f1d8d0;
     border: 2px solid #EABBC6;
@@ -122,7 +159,8 @@ section h2{
 }
 .container_memorias{
     border: 1px solid #EABBC6 ;
-    background-image: linear-gradient(to right bottom, #eabbc6, #efc9c8, #f1d8d0, #f2e7df, #f6f4f1);
+    /*background-image: linear-gradient(to right bottom, #eabbc6, #efc9c8, #f1d8d0, #f2e7df, #f6f4f1);*/
+    background-image: linear-gradient(to right bottom, #f2e7df, #f1d8d0, #efc9c8, #eabbc6);
     border-radius: 20px;
     width: 80%;
     display: flex;
@@ -143,10 +181,16 @@ section h2{
 }
 
 footer{
+    /*background-image: linear-gradient(to right bottom, #eabbc6, #efc9c8, #f1d8d0, #f2e7df, #f6f4f1);*/
+    background-color: #eabbc6;
     display: grid;
+    color: #5E565A;
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
     align-items: center;
+    padding: 15px;
+    margin-top: 20px;
+
 }
 footer .logo{
     margin: auto auto;
@@ -155,24 +199,19 @@ footer .logo img{
     width: 120px;
     border-radius: 50%;
 } 
-footer{
-    /*background-color: #FFEFF3;*/
-    background-color: #FFA69E;
-    margin-top: 20px;
-}
 footer .about{
     text-align: left;
     margin-left: 30px;
 }
 footer .about h3{
-    color: #FF537B;
+    color: #363432;
     margin:10px;
 }
 footer .about h4{
     color: #363432;
+    text-shadow: #5E565A;
     margin: 10px;
 }
-
 footer .about p{
     font-size: 0.8rem;
     margin: 10px;
