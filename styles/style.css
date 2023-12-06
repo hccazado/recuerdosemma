@@ -21,6 +21,8 @@ header{
     top:0;
     padding:5px;
     z-index: 10;
+    width: 100vw;
+    box-sizing: border-box;
 }
 .logo_header{
     width: 80px;
@@ -58,7 +60,7 @@ nav a:hover{
     grid-column:1/11;
     grid-row: 1/10;
     z-index: -1;
-    width:100%;
+    width:100vw;
 }
 .filter{
     background: linear-gradient(rgba(145, 130, 110, 0.8), rgba(110, 110, 110, 0.6));
@@ -99,14 +101,6 @@ section h2{
 .container_personalizados{
     margin: 15px auto;
 }
-
-.carousel{
-    margin: 50px auto;
-    background-color: #f1d8d0;
-    border: 1px solid black;
-    width:98%;
-    height: 250px;
-}
 .container_ventas{
     margin: 50px auto;
     display: flex;
@@ -135,68 +129,61 @@ section h2{
     border-bottom-left-radius: 20%;
 }
 
+.info p{
+    font-size: 1em;
+}
+
 .info ul{
     list-style-type:circle;
 }
 .info > ul >li{
     text-align: left;
 }
-
-.card_venta{
-    background-color: #f1d8d0;
-    border: 2px solid #EABBC6;
-    border-radius: 1.5rem;
-    width:275px;
-    height:300px;
-    padding: auto 15px;
-}
-.card_venta img{
-    margin-top: 10px;
-    width: 55%;
-    border-radius: 50%;
-}
-.card_venta h3{
-    color: #5E565A;
-    font-size: 1.5rem;
-}
-.card_venta:hover{
-    .tarjeta_frente{
-        display: none;
-    }
-    .tarjeta_dorso{
-        display: block;
-    }
-}
-.tarjeta_dorso{
-    display: none;
-    text-align: left;
-    padding: 15px;
-}
-.tarjeta_dorso ul{
-    list-style-type: none;
-    text-align: left;
-}
 .container_memorias{
-    border: 1px solid #EABBC6 ;
+    /*border: 1px solid #EABBC6 ;*/
     /*background-image: linear-gradient(to right bottom, #eabbc6, #efc9c8, #f1d8d0, #f2e7df, #f6f4f1);*/
     background-image: linear-gradient(to right bottom, #f2e7df, #f1d8d0, #efc9c8, #eabbc6);
-    border-radius: 20px;
-    width: 80%;
+    border-top-right-radius: 4rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin:50px auto;
-    padding: 15px;
+}
+.container_memorias div{
+    width:60%;
+    text-align: center;
+    margin-left: 20px;
+}
+.container_memorias h2{
+    padding-left: 15px;
+    text-align: left;
+    margin-top:20px;
+    margin-bottom: 30px;
 }
 .container_memorias p{
-    justify-self: center;
-    align-self: center;
-    width: 80%;
+    text-align: left;
     text-align: left;
     padding: 15px;
 }
 .container_memorias img{
-    width:300px;
+    width:350px;
+    margin-right: 0;
+}
+
+.container_memorias a{
+    border: 1px solid #6a4a3a;
+    padding:15px;
+    text-decoration: none;
+    color:#5E565A;
+    border-radius: 5px;
+    float: left;
+    margin-left: 15px;
+}
+.container_memorias a:hover{
+    background-color: #6a4a3a;
+    color:#ffefd5;
+    border-radius: 5px;
 }
 
 footer{
@@ -238,6 +225,7 @@ footer .about p{
 footer .about a{
     text-decoration: none;
     color: #363432;
+    font-size: 0.9rem;
 }
 footer .about a:hover{
     text-decoration: underline;
@@ -255,16 +243,64 @@ footer .social_media{
 
 /*-------------------------------------------------------------*/
 /*-----------------Produtos------------------------------------*/
-.container_produtos{
+.container_productos{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     margin: 50px auto;
-    width:90%;
+    width:95%;
+    row-gap: 15px;
 }
-.produto{
-    border: 1px solid black;
-    width: 95%;
+.producto{
+    border: 1px solid #6a4a3a;
+    border-radius: 5px;
+    max-width: 500px;
     height: 200px;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+}
+.producto img{
+    width:30%;
+    max-width: 140px;
+    animation-duration: 0.5s;
+}
+.producto img:hover{
+    transform: scaleX(1.2);
+}
+.producto div h3{
+    text-align: center;
+}
+.producto div{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    max-width: 400px;
+}
+.producto div span{
+    font-size: 0.9rem;   
+}
+
+@media screen and (max-width:900px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        column-gap: 0;
+        height:100px;
+    }
+    .logo_header{
+        margin-left: 5px;
+        align-self: center;
+        justify-self: center;
+    }
+    nav{
+        display:flex;
+        flex-direction: column;
+    }
+    nav a{
+        padding: 10px;
+
+    }
 }
