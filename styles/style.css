@@ -95,18 +95,13 @@ section h2{
 }
 
 .box_shadow{
-    box-shadow: 5px 7px 10px rgba(54,52,50,0.4);
+    /*box-shadow: 5px 7px 10px rgba(54,52,50,0.4);*/
+    box-shadow: 5px 7px 10px rgba(212, 175, 185, 0.6);
+    
 }
 
 .container_personalizados{
     margin: 15px auto;
-}
-.container_ventas{
-    margin: 50px auto;
-    display: flex;
-    padding: 15px;
-    justify-content: space-around;
-    width: 80%;
 }
 .cardventa{
     background-color: #f1d8d0;
@@ -140,8 +135,6 @@ section h2{
     text-align: left;
 }
 .container_memorias{
-    /*border: 1px solid #EABBC6 ;*/
-    /*background-image: linear-gradient(to right bottom, #eabbc6, #efc9c8, #f1d8d0, #f2e7df, #f6f4f1);*/
     background-image: linear-gradient(to right bottom, #f2e7df, #f1d8d0, #efc9c8, #eabbc6);
     border-top-right-radius: 4rem;
     width: 100%;
@@ -279,16 +272,32 @@ footer .social_media{
     align-items: center;
     max-width: 400px;
 }
-.producto div span{
-    font-size: 0.9rem;   
+.producto div strong{
+    font-size: 0.9rem;
+    background-color: #FAC3A5;
+    padding: 4px;
+    border-radius: 15px;   
 }
 
 @media screen and (max-width:900px) {
     header{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 120px 1fr;
         column-gap: 0;
         height:100px;
+        width:100%;
+        justify-content: space-between;
+    }
+    .container_hero{
+        margin-top: 0;
+    }
+    header a{
+        align-self: center;
+        justify-self: center;
+    }
+    .hero_img{
+        width: 100%;
+        height: 100%;   
     }
     .logo_header{
         margin-left: 5px;
@@ -301,6 +310,107 @@ footer .social_media{
     }
     nav a{
         padding: 10px;
+        width:90%;
+    }
+    .container_memorias{
+        display: grid;
+    }
+    .container_memorias div{
+        grid-column: 2/9;
+        grid-row: 1/7;
+        z-index:1;
+        width: 80%;
+        padding-left: 0;
+    }
+    .container_memorias p{
+        color: #111;
+        padding-left: 0;
+    }
+    .container_memorias h2{
+        padding-left: 0;
+    }
+    .container_memorias img{
+        grid-column: 4/10;
+        grid-row: 4/11;
+        z-index: 0;
+    }
+    .container_memorias a{
+        background-color: #6a4a3a;
+        color:#ffefd5;
+        border-radius: 5px;
+        margin-left: 0;
+    }
+    .filter_recuerdos{
+        background: linear-gradient(rgba(255, 254, 253, 0.2), rgba(255, 254, 253, 0.2));
 
+        grid-column: 1/11;
+        grid-row: 1/11;
+        max-width:100vw;
+        
+    }
+    .cardventa{
+        flex-direction: column;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        border-bottom-left-radius: 0;
+        margin:50px auto;
+        width: 100%;
+    }
+    .cardventa img{
+        width:100%;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        border-bottom-left-radius: 0;
+    }
+
+    .info{
+        width:90%;
+    }
+
+    .container_productos{
+        display: flex;
+        flex-direction: column;
+    }
+    .producto{
+        flex-direction: column;
+        height: 400px;
+    }
+    .producto h3{
+        margin:10px;
+    }
+    .producto p {
+        margin: 10px;
+    }
+    .producto img{
+        align-self: center;
+        margin: 15px;
+        
+        height: 200px;
+    }
+    .producto strong{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        grid-template-rows: repeat(3,1fr);
+        justify-items: center;
+    }
+    footer .about{
+        text-align: center;
+        grid-row: 2/3;
+        grid-column: 1/4;
+        margin-left: 0;
+        width: 100%;
+    }
+    footer .logo{
+        width: 100%;
+        grid-row: 1/2;
+        grid-column: 1/4;
+        margin-top: 20px;
+    }
+    footer .social_media{
+        width:100%;
+        grid-row: 3/4;
+        grid-column: 1/4;
     }
 }
