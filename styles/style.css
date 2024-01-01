@@ -12,11 +12,8 @@ header{
     column-gap: 20px;
     grid-template-columns: 120px 1fr 120px;
     height: 80px;
-    /*background-color: rgba(255,239,243,0.9);*/
-    /*background-color: rgba(255, 166, 158, 0.6);*/
     background-color: rgba(255, 254, 253, 0.8);
-    box-shadow: rgba(212, 175, 185, 0.6) 2px 4px 3px;
-    /*box-shadow: rgba(255, 166, 158, 0.6) 2px 4px 3px;*/
+    box-shadow: rgba(212, 175, 185, 0.4) 2px 4px 3px;
     position: sticky;
     top:0;
     padding:5px;
@@ -44,6 +41,7 @@ nav a{
 }
 nav a:hover{
     background-color: #FAC3A5;
+    border-radius: 5px;
 }
 .container{
     text-align: center;
@@ -75,7 +73,7 @@ nav a:hover{
     grid-row: 4/7;
     align-self: center;
     color: #fed;
-    text-shadow:rgba(54,52,50,0.4) 2px 2px 9px;
+    text-shadow:rgba(54,52,50,0.8) 2px 2px 9px;
 }
 
 main{
@@ -95,8 +93,8 @@ section h2{
 }
 
 .box_shadow{
-    /*box-shadow: 5px 7px 10px rgba(54,52,50,0.4);*/
-    box-shadow: 5px 7px 10px rgba(212, 175, 185, 0.6);
+    box-shadow: 5px 7px 10px rgba(212, 175, 185, 0.4);
+    
     
 }
 
@@ -248,35 +246,41 @@ footer .social_media{
 .producto{
     border: 1px solid #6a4a3a;
     border-radius: 5px;
-    max-width: 500px;
-    height: 200px;
+    max-width: 370px;
+    height: 450px;
     padding:10px;
-    display: flex;
-    flex-direction: row;
 }
 .producto img{
-    width:30%;
-    max-width: 140px;
-    animation-duration: 0.5s;
-}
-.producto img:hover{
-    transform: scaleX(1.2);
+    width:50%;
+    height: 50%;
+    max-width: 160px;
 }
 .producto div h3{
     text-align: center;
 }
-.producto div{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    max-width: 400px;
+.producto div h4{
+    margin: 5px;
 }
-.producto div strong{
+.producto div p{
+    margin: 5px;
+}
+.producto strong{
     font-size: 0.9rem;
     background-color: #FAC3A5;
-    padding: 4px;
-    border-radius: 15px;   
+    padding: 5px;
+    border-radius: 7px;
+}
+.producto h3{
+    margin:10px;
+}
+.producto p {
+    margin: 10px;
+}
+.producto img{
+    align-self: center;
+    margin: 15px;
+    
+    height: 200px;
 }
 
 @media screen and (max-width:900px) {
@@ -372,8 +376,7 @@ footer .social_media{
         flex-direction: column;
     }
     .producto{
-        flex-direction: column;
-        height: 400px;
+        height: 420px;
     }
     .producto h3{
         margin:10px;
