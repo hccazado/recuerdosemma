@@ -1,20 +1,24 @@
-var index = 0;
-document.addEventListener(onload, carrousel());
+var idx_mat = 0;
 
-function carrousel(){
-    let matrimonioImages = document.getElementsByClassName("matrimonio");
-    for(let i=0;i<matrimonioImages.length;i++)
+document.addEventListener(onload, slideShow());
+
+function slideShow(){ 
+    let carouselItems = document.getElementsByClassName("matrimonio");
+    
+    for(let i = 0; i < carouselItems.length; i++)
     {
-        if(i!=index)
-        {
-            matrimonioImages[i].setAttribute("display","none");
-        }
-        if(index > matrimonioImages.length)
-        {
-            index = 0;
-        }
-        matrimonioImages[index].setAttribute("display","block");
-        index++;
-        setTimeout(5000,carrousel());
+        if(i != idx_mat)
+        carouselItems[i].style.display = "none";
     }
+    if(idx_mat >= carouselItems.length){
+        idx_mat = 0;
+        carouselItems[idx_mat].style.display = "block";
+        setTimeout(slideShow, 5000);
+        idx_mat++;
+    }
+    else{
+        carouselItems[idx_mat].style.display = "block";
+        setTimeout(slideShow, 5000);
+        idx_mat++;
+    } 
 }
