@@ -236,7 +236,7 @@ footer .social_media{
 /*-----------------Produtos------------------------------------*/
 
 .container_productos{
-    width:95%;
+    max-width:900px;
     margin: 50px auto;
 }
 .container_productos section h2{
@@ -246,21 +246,27 @@ footer .social_media{
 .producto{
     border: 1px solid #6a4a3a;
     border-radius: 5px;
-    width: 100%;
-    /*height: 450px;*/
+    height:350px;
     padding:10px;
     margin: 30px auto;
     display: grid;
-    grid-template-columns: 25% 1fr;
-    min-height: 450px;
+    grid-template-columns: 300px 1fr;
+    max-width:1000px;
 }
 
 .slide{
-    width:90%;
     display: none;
+    padding: 0;
+    margin-left: -40px;
 }
 .producto img{
-    width:100%;
+    width:220px;
+    border-radius: 20px;
+    animation: fade 0.2s 6.8s;
+}
+.producto div{
+    display: flex;
+    flex-direction: column;
 }
 .producto div h3{
     text-align: center;
@@ -282,11 +288,21 @@ footer .social_media{
     margin: 5px;
 }
 .producto strong{
+    align-self: end;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    border: 1px solid #FAC3A5;
+    border-radius: 7px;
+    padding: 7px;
+    margin-right: 40px;
+    
+}
+.producto strong:hover{
     font-size: 0.9rem;
     background-color: #FAC3A5;
-    padding: 5px;
-    border-radius: 7px;
+    text-decoration: none;
 }
+
 .producto h3{
     margin:10px;
 }
@@ -385,26 +401,33 @@ footer .social_media{
     .container_productos{
         display: flex;
         flex-direction: column;
+        width:90%;
     }
     .producto{
         display: flex;
         flex-direction: column;
+        height: auto;
+    }
+    .slide{
+        margin: 0 auto;
+        width: 100%;
+        height:250px;
     }
     .producto h3{
-        margin:10px;
+        margin-top:50px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .producto p {
         margin: 10px;
     }
-    .producto img{
-        align-self: center;
-        margin: 15px;
-        
-        height: 200px;
-    }
     .producto strong{
         font-size: 0.9rem;
         margin-bottom: 20px;
+        align-self: center;
+        background-color: #FAC3A5;
+        text-decoration: none;
     }
 
     footer{
