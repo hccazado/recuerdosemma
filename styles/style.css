@@ -387,7 +387,8 @@ footer .social_media{
         flex-direction: column;
     }
     .producto{
-        height: 420px;
+        display: flex;
+        flex-direction: column;
     }
     .producto h3{
         margin:10px;
@@ -403,6 +404,7 @@ footer .social_media{
     }
     .producto strong{
         font-size: 0.9rem;
+        margin-bottom: 20px;
     }
 
     footer{
